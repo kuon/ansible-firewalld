@@ -8,7 +8,7 @@
   with_nested:
   - ['yes', 'no']
   - allowed_ips
-  when: group is defined
+  when: allowed_ips is defined
 
 - name: Allow connections
   firewalld: port={{ port }}/tcp permanent={{ item }} state=enabled
