@@ -1,0 +1,17 @@
+- name: Allow connections
+  firewalld: rich_rule='rule family="ipv4"
+                        source address="{{ item[1] }}"
+                        port port="{{ port }}" protocol="tcp"
+                        accept'
+             permanent={{ item[0] }} state=enabled
+
+  with_nested:
+  - ['yes', 'no']
+  - allowed_ips
+  when: group is defined
+
+- name: Allow connections
+  firewalld: port={{ port }}/tcp permanent={{ item }} state=enabled
+
+  with_items: ['yes', 'no']
+  when: public is defined

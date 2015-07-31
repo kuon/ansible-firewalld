@@ -1,0 +1,5 @@
+---
+# defaults file for make-package
+nginx_config: nginx.config.j2
+nginx_dir: /srv/nginx
+nginx_ssl_certificate_path: server.crt
