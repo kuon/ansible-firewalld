@@ -1,14 +1,3 @@
-
-# THIS REPOSITORY HAS MOVED
-
-New URL: https://git.goyman.com/kuon/ansible-firewalld
-
-Why I moved everything out of GitHub:
-
-https://github.com/kuon/WhyILeftGithub/blob/main/README.md
-
-----
-
 firewalld
 ======
 
